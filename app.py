@@ -108,7 +108,7 @@ if st.button("Genera Distinta Compilata", type="primary"):
         with st.spinner("Genero il file Excel..."):
             try:
                 # Carica il TEMPLATE Excel (che è su GitHub insieme a app.py)
-                workbook = load_workbook(filename="DISTINTA DA COMPILARE.xlsx")
+                workbook = load_workbook(filename="DISTINTA_DA_COMPILARE.xlsx")
                 sheet = workbook["distinta"]
 
                 # --- Scrive i dati della partita ---
