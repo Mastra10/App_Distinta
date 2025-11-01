@@ -17,7 +17,7 @@ def carica_database_giocatori():
 
         # --- MODIFICA QUI ---
         # Apri il Google Sheet usando il suo NOME ESATTO
-        sh = gc.open("NOME_DEL_TUO_FOGLIO_GOOGLE") 
+        sh = gc.open("db_giocatori")
         
         # Apri il foglio di lavoro (scheda) specifico, es. "db"
         worksheet = sh.worksheet("db")
