@@ -89,8 +89,8 @@ with col1:
 with col2:
     data_partita = st.date_input("Data Partita")
     # ... (aggiungi altri campi se vuoi editarli, es. Dirigente)
-    dirigente = st.text_input("Dirigente Accompagnatore", "M. ROSSI")
-
+    tecnico = st.text_input("Tecnico", "L. TRENTINI")
+    dirigente = st.text_input("Dirigente Accompagnatore", "M.SPEZIA - A.MASTRAPASQUA")
 
 # --- Form per i giocatori ---
 st.header("2. Giocatori Convocati")
@@ -112,9 +112,11 @@ if st.button("Genera Distinta Compilata", type="primary"):
                 sheet = workbook["distinta"]
 
                 # --- Scrive i dati della partita ---
-                sheet['B8'] = squadra
-                sheet['B7'] = gara
-                sheet['E8'] = data_partita.strftime('%d/%m/%Y') # Formatta la data
+                sheet['C8'] = squadra
+                sheet['C7'] = gara
+                sheet['F8'] = data_partita.strftime('%d/%m/%Y') # Formatta la data
+                sheet['B30'] = tecnico
+                sheet['D30'] = dirigente
                 # ... (scrivi gli altri campi, es. Dirigente)
                 # sheet['B32'] = dirigente # Esempio, cella inventata
 
